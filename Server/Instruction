@@ -1,0 +1,4 @@
+This folder contains 3 components:
+1. The flask REST API (server.py)
+2. The function to get the location names (util.py)
+3. The folder contains the model json file and the data column pickle file.
