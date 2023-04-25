@@ -1,0 +1,79 @@
+{
+	"info": {
+		"_postman_id": "d5da69d8-34d0-4f6e-9b2e-68b70143d2df",
+		"name": "House prediction script",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24073937"
+	},
+	"item": [
+		{
+			"name": "Get locations",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/get_location_names",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"get_location_names"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get prediction",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "total_sqft",
+							"value": "1000",
+							"type": "text"
+						},
+						{
+							"key": "location",
+							"value": "1st Phase JP Nagar",
+							"type": "text"
+						},
+						{
+							"key": "size_num",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "bath",
+							"value": "3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/predict_home_price",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"predict_home_price"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
